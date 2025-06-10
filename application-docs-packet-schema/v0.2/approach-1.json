@@ -1,0 +1,40 @@
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "dateOfBirth": "2002-05-12",
+  "gender": "Male",
+  "email": "john.doe@example.com",
+  "phone": "+919876543210",
+  "address": "123 Main St, Anytown, USA",
+  "city": "Anytown",
+  "state": "CA",
+  "zip": "12345",
+
+  "files": [
+    {"iCardSizePhoto": "base64Content"}
+  ],
+
+  "vc_documents": [
+    {
+      "document_submission_reason": "[\"disabilityType\", \"disabilityRange\", \"disabilityCertificate\"]",
+      "document_type": "disabilityCertificate",
+      "document_format": "json",
+      "document_issuer": "https://gov.example.org",
+      "document_content": "base64Content"
+    },
+    {
+      "document_submission_reason": "[\"marks\"]",
+      "document_type": "marksheet",
+      "document_format": "json",
+      "document_issuer": "https://university.example.edu",
+      "document_content": "base64Content"
+    },
+    {
+      "document_submission_reason": "[\"idProof\"]",
+      "document_type": "aadhar",
+      "document_format": "xml",
+      "document_issuer": "https://gov.example.org",
+      "document_content": "base64Content"
+    }
+  ]
+}
