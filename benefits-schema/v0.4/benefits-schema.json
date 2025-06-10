@@ -496,6 +496,93 @@
             },
             "minItems": 1
           }
+        },
+        "benefitCalculationRules": {
+          "type": "array",
+          "description": "Defines rules to calculate benefit amounts based on form inputs",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ruleId": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "fixed",
+                  "lookup",
+                  "conditional",
+                  "formula"
+                ]
+              },
+              "outputField": {
+                "type": "string"
+              },
+              "inputFields": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fixedValue": {
+                "type": "string"
+              },
+              "lookupTable": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "match": {
+                      "type": "string"
+                    },
+                    "amount": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "match",
+                    "amount"
+                  ]
+                }
+              },
+              "conditions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "if": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "then": {
+                      "type": "object",
+                      "properties": {
+                        "amount": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "if",
+                    "then"
+                  ]
+                }
+              },
+              "formula": {
+                "type": "string",
+                "description": "A JS-compatible formula like 'tuition + miscFee'"
+              }
+            },
+            "required": [
+              "ruleId",
+              "type",
+              "outputField"
+            ]
+          }
         }
       }
     }
