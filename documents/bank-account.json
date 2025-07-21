@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.org/schemas/BankAccountCredentialSchema.json",
+  "title": "BankAccountCredential",
+  "description": "Schema for Verifiable Credential containing bank account information.",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "type": ["string", "array"]
+    },
+    "id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "type": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "issuer": {
+      "type": ["string", "object"]
+    },
+    "issuanceDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "credentialSubject": {
+      "type": "object",
+      "required": [
+        "accountHolderName",
+        "accountNumber",
+        "IFSCCode",
+        "bankName",
+        "issuedBy",
+        "issuerAuthority",
+        "issuedDate"
+      ],
+      "properties": {
+        "accountHolderName": {
+          "type": "string"
+        },
+        "accountNumber": {
+          "type": "number"
+        },
+        "IFSCCode": {
+          "type": "string"
+        },
+        "bankName": {
+          "type": "string"
+        },
+        "bankAddress": {
+          "type": "string"
+        },
+        "issuedBy": {
+          "type": "string"
+        },
+        "issuerAuthority": {
+          "type": "string"
+        },
+        "issuedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "issuingAuthorityAddress": {
+          "type": "string"
+        },
+        "issuingAuthorityDistrict": {
+          "type": "string"
+        },
+        "issuingAuthoritypin": {
+          "type": "number"
+        },
+        "issuingAuthoritystate": {
+          "type": "string"
+        },
+        "issuingAuthoritycountry": {
+          "type": "string"
+        }
+      }
+    },
+    "proof": {
+      "type": "object"
+    }
+  },
+  "required": ["@context", "type", "issuer", "issuanceDate", "credentialSubject"]
+}

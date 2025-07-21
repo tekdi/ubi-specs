@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/domicile-certificate-v1",
+  "title": "Domicile Certificate Credential",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          { "type": "string" },
+          { "type": "object" }
+        ]
+      },
+      "minItems": 1
+    },
+    "id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "type": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "issuer": {
+      "type": "string",
+      "format": "uri"
+    },
+    "issuanceDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "credentialSubject": {
+      "type": "object",
+      "properties": {
+        "firstName": { "type": "string" },
+        "middleName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "addressLine1": { "type": "string" },
+        "district": { "type": "string" },
+        "pin": { "type": "number" },
+        "state": { "type": "string" },
+        "dateofBirth": { "type": "string", "format": "date" },
+        "placeofBirth": { "type": "string" },
+        "placeofBirthVillage": { "type": "string" },
+        "placeofBirthTaluka": { "type": "string" },
+        "placeofBirthDistrict": { "type": "string" },
+        "domicileState": { "type": "string" },
+        "supportingDocuments": { "type": "string" },
+        "issuedBy": { "type": "string" },
+        "issuerAuthority": { "type": "string" },
+        "issuedDate": { "type": "string", "format": "date" },
+        "issuingAuthorityAddress": { "type": "string" },
+        "issuingAuthorityDistrict": { "type": "string" },
+        "issuingAuthoritypin": { "type": "number" },
+        "issuingAuthoritystate": { "type": "string" },
+        "issuingAuthoritycountry": { "type": "string" }
+      },
+      "required": [
+        "firstName",
+        "addressLine1",
+        "district",
+        "pin",
+        "state",
+        "dateofBirth",
+        "domicileState",
+        "supportingDocuments",
+        "issuedBy",
+        "issuerAuthority",
+        "issuedDate"
+      ]
+    },
+    "proof": {
+      "type": "object"
+    }
+  },
+  "required": ["@context", "type", "issuer", "issuanceDate", "credentialSubject"]
+}

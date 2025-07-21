@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "StudentEnrolmentCredential",
+  "type": "object",
+  "properties": {
+    "studentUniqueId": { "type": "string" },
+    "firstName": { "type": "string" },
+    "middleName": { "type": "string" },
+    "lastName": { "type": "string" },
+    "academicYear": { "type": "string" },
+    "class": { "type": "string" },
+    "schoolName": { "type": "string" },
+    "schoolId": { "type": "string" },
+    "schoolAddressLine1": { "type": "string" },
+    "schoolAddressLine2": { "type": "string" },
+    "schoolLandmark": { "type": "string" },
+    "schoolLocality": { "type": "string" },
+    "schoolDistrict": { "type": "string" },
+    "schoolPin": { "type": "number" },
+    "schoolState": { "type": "string" },
+    "schoolCountry": { "type": "string" },
+    "authorityName": { "type": "string" },
+    "designationPrincipal": { "type": "string" },
+    "issuedBy": { "type": "string" },
+    "issuerAuthority": { "type": "string" },
+    "issuedDate": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "studentUniqueId",
+    "firstName",
+    "academicYear",
+    "class",
+    "schoolName",
+    "schoolId",
+    "schoolAddressLine1",
+    "schoolAddressLine2",
+    "schoolLandmark",
+    "schoolLocality",
+    "schoolDistrict",
+    "schoolPin",
+    "schoolState",
+    "schoolCountry",
+    "authorityName",
+    "designationPrincipal",
+    "issuedBy",
+    "issuerAuthority",
+    "issuedDate"
+  ]
+}
