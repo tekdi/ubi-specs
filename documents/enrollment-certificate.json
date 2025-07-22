@@ -1,52 +1,82 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "StudentEnrolmentCredential",
+  "description": "Schema for Verifiable Credential containing student enrollment information.",
   "type": "object",
   "properties": {
-    "studentUniqueId": { "type": "string" },
-    "firstName": { "type": "string" },
-    "middleName": { "type": "string" },
-    "lastName": { "type": "string" },
-    "academicYear": { "type": "string" },
-    "class": { "type": "string" },
-    "schoolName": { "type": "string" },
-    "schoolId": { "type": "string" },
-    "schoolAddressLine1": { "type": "string" },
-    "schoolAddressLine2": { "type": "string" },
-    "schoolLandmark": { "type": "string" },
-    "schoolLocality": { "type": "string" },
-    "schoolDistrict": { "type": "string" },
-    "schoolPin": { "type": "number" },
-    "schoolState": { "type": "string" },
-    "schoolCountry": { "type": "string" },
-    "authorityName": { "type": "string" },
-    "designationPrincipal": { "type": "string" },
-    "issuedBy": { "type": "string" },
-    "issuerAuthority": { "type": "string" },
-    "issuedDate": {
+    "@context": {
+      "type": ["string", "array"]
+    },
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": ["string", "array"]
+    },
+    "issuer": {
+      "type": ["string", "object"]
+    },
+    "issuanceDate": {
       "type": "string",
-      "format": "date"
+      "format": "date-time"
+    },
+    "credentialSubject": {
+      "type": "object",
+      "required": [
+        "studentUniqueId",
+        "firstName",
+        "academicYear",
+        "class",
+        "schoolName",
+        "schoolId",
+        "schoolAddress",
+        "designationPrincipal",
+        "issuedBy",
+        "issuingAuthority",
+        "issueDate"
+      ],
+      "properties": {
+        "studentUniqueId": { "type": "string" },
+        "firstName": { "type": "string" },
+        "middleName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "academicYear": { "type": "string" },
+        "class": { "type": "string" },
+        "schoolName": { "type": "string" },
+        "schoolId": { "type": "string" },
+        "schoolAddress": {
+          "type": "object",
+          "properties": {
+            "addressLine1": { "type": "string" },
+            "addressLine2": { "type": "string" },
+            "district": { "type": "string" },
+            "state": { "type": "string" },
+            "pin": { "type": "string" }
+          }
+        },
+        "designationPrincipal": { "type": "string" },
+        "issuedBy": { "type": "string" },
+        "issueDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "issuingAuthority": {
+          "type": "string"
+        },
+        "issuingAuthorityAddress": {
+          "type": "string"
+        },
+        "issuingAuthorityDistrict": {
+          "type": "string"
+        },
+        "issuingAuthorityState": {
+          "type": "string"
+        },
+        "issuingAuthorityPin": {
+          "type": "string"
+        }
+      }
     }
   },
-  "required": [
-    "studentUniqueId",
-    "firstName",
-    "academicYear",
-    "class",
-    "schoolName",
-    "schoolId",
-    "schoolAddressLine1",
-    "schoolAddressLine2",
-    "schoolLandmark",
-    "schoolLocality",
-    "schoolDistrict",
-    "schoolPin",
-    "schoolState",
-    "schoolCountry",
-    "authorityName",
-    "designationPrincipal",
-    "issuedBy",
-    "issuerAuthority",
-    "issuedDate"
-  ]
+  "required": ["@context", "type", "issuer", "issuanceDate", "credentialSubject"]
 }

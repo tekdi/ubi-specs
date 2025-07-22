@@ -1,31 +1,20 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.org/schemas/domicile-certificate-v1",
-  "title": "Domicile Certificate Credential",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DomicileCertificateCredential",
+  "description": "Schema for Verifiable Credential containing domicile certificate information.",
   "type": "object",
   "properties": {
     "@context": {
-      "type": "array",
-      "items": {
-        "anyOf": [
-          { "type": "string" },
-          { "type": "object" }
-        ]
-      },
-      "minItems": 1
+      "type": ["string", "array"]
     },
     "id": {
-      "type": "string",
-      "format": "uri"
+      "type": "string"
     },
     "type": {
-      "type": "array",
-      "items": { "type": "string" },
-      "minItems": 1
+      "type": ["string", "array"]
     },
     "issuer": {
-      "type": "string",
-      "format": "uri"
+      "type": ["string", "object"]
     },
     "issuanceDate": {
       "type": "string",
@@ -33,46 +22,66 @@
     },
     "credentialSubject": {
       "type": "object",
-      "properties": {
-        "firstName": { "type": "string" },
-        "middleName": { "type": "string" },
-        "lastName": { "type": "string" },
-        "addressLine1": { "type": "string" },
-        "district": { "type": "string" },
-        "pin": { "type": "number" },
-        "state": { "type": "string" },
-        "dateofBirth": { "type": "string", "format": "date" },
-        "placeofBirth": { "type": "string" },
-        "placeofBirthVillage": { "type": "string" },
-        "placeofBirthTaluka": { "type": "string" },
-        "placeofBirthDistrict": { "type": "string" },
-        "domicileState": { "type": "string" },
-        "supportingDocuments": { "type": "string" },
-        "issuedBy": { "type": "string" },
-        "issuerAuthority": { "type": "string" },
-        "issuedDate": { "type": "string", "format": "date" },
-        "issuingAuthorityAddress": { "type": "string" },
-        "issuingAuthorityDistrict": { "type": "string" },
-        "issuingAuthoritypin": { "type": "number" },
-        "issuingAuthoritystate": { "type": "string" },
-        "issuingAuthoritycountry": { "type": "string" }
-      },
       "required": [
         "firstName",
-        "addressLine1",
-        "district",
-        "pin",
-        "state",
-        "dateofBirth",
         "domicileState",
-        "supportingDocuments",
-        "issuedBy",
-        "issuerAuthority",
-        "issuedDate"
-      ]
-    },
-    "proof": {
-      "type": "object"
+        "issuingAuthority",
+        "issueDate",
+        "issuedBy"
+      ],
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "dateOfBirth": {
+          "type": "string",
+          "format": "date"
+        },
+        "placeOfBirth": {
+          "type": "object",
+          "properties": {
+            "addressLine1": { "type": "string" },
+            "addressLine2": { "type": "string" },
+            "district": { "type": "string" },
+            "state": { "type": "string" },
+            "pin": { "type": "string" }
+          }
+        },
+        "domicileState": {
+          "type": "string"
+        },
+        "issuedBy": {
+          "type": "string"
+        },
+        "issueDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "issuingAuthority": {
+          "type": "string"
+        },
+        "issuingAuthorityAddress": {
+          "type": "string"
+        },
+        "issuingAuthorityDistrict": {
+          "type": "string"
+        },
+        "issuingAuthorityState": {
+          "type": "string"
+        },
+        "issuingAuthorityPin": {
+          "type": "string"
+        }
+      }
     }
   },
   "required": ["@context", "type", "issuer", "issuanceDate", "credentialSubject"]

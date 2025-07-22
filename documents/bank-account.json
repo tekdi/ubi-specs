@@ -1,6 +1,5 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://example.org/schemas/BankAccountCredentialSchema.json",
   "title": "BankAccountCredential",
   "description": "Schema for Verifiable Credential containing bank account information.",
   "type": "object",
@@ -9,15 +8,10 @@
       "type": ["string", "array"]
     },
     "id": {
-      "type": "string",
-      "format": "uri"
+      "type": "string"
     },
     "type": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "minItems": 1
+      "type": ["string", "array"]
     },
     "issuer": {
       "type": ["string", "object"]
@@ -29,16 +23,22 @@
     "credentialSubject": {
       "type": "object",
       "required": [
-        "accountHolderName",
+        "firstName",
         "accountNumber",
         "IFSCCode",
         "bankName",
         "issuedBy",
-        "issuerAuthority",
-        "issuedDate"
+        "issuingAuthority",
+        "issueDate"
       ],
       "properties": {
-        "accountHolderName": {
+        "firstName": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string"
+        },
+        "lastName": {
           "type": "string"
         },
         "accountNumber": {
@@ -51,17 +51,24 @@
           "type": "string"
         },
         "bankAddress": {
-          "type": "string"
+          "type": "object",
+          "properties": {
+            "addressLine1": { "type": "string" },
+            "addressLine2": { "type": "string" },
+            "district": { "type": "string" },
+            "state": { "type": "string" },
+            "pin": { "type": "string" }
+          }
         },
         "issuedBy": {
           "type": "string"
         },
-        "issuerAuthority": {
-          "type": "string"
-        },
-        "issuedDate": {
+        "issueDate": {
           "type": "string",
           "format": "date"
+        },
+        "issuingAuthority": {
+          "type": "string"
         },
         "issuingAuthorityAddress": {
           "type": "string"
@@ -69,19 +76,13 @@
         "issuingAuthorityDistrict": {
           "type": "string"
         },
-        "issuingAuthoritypin": {
+        "issuingAuthorityState": {
+          "type": "string"
+        },
+        "issuingAuthorityPin": {
           "type": "number"
-        },
-        "issuingAuthoritystate": {
-          "type": "string"
-        },
-        "issuingAuthoritycountry": {
-          "type": "string"
         }
       }
-    },
-    "proof": {
-      "type": "object"
     }
   },
   "required": ["@context", "type", "issuer", "issuanceDate", "credentialSubject"]
