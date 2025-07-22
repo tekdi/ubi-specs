@@ -1,0 +1,86 @@
+{
+  "$id": "schema:cord:s34CRxEHWYH3gk6f68sSQwoMjqzQicS1wennVSrPttE86mpjX",
+  "title": "Declaration Certificate :9e723e9c-2a7b-4e2d-b4f6-5cd179486a4e",
+  "description": "Schema for declaration certificate",
+  "properties": {
+    "studentuniqueid": {
+      "type": "string"
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "middlename": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "addressline1": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "pin": {
+      "type": "number"
+    },
+    "state": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "received_assistance_from_any_other_source_during_the_last_one_year_for_the_same_purpose_as_of_this_scheme?": {
+      "type": "string"
+    },
+    "issuedby": {
+      "type": "string"
+    },
+    "issuerauthority": {
+      "type": "string"
+    },
+    "issueddate": {
+      "type": "string"
+    },
+    "validupto": {
+      "type": "string"
+    },
+    "originalvc": {
+      "type": "object"
+    },
+    "issuingauthorityaddress": {
+      "type": "string"
+    },
+    "issuingauthoritydistrict": {
+      "type": "string"
+    },
+    "issuingauthoritypin": {
+      "type": "string"
+    },
+    "issuingauthoritystate": {
+      "type": "string"
+    },
+    "issuingauthoritycountry": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "addressline1",
+    "country",
+    "district",
+    "firstname",
+    "issuedby",
+    "issueddate",
+    "issuerauthority",
+    "lastname",
+    "originalvc",
+    "pin",
+    "received_assistance_from_any_other_source_during_the_last_one_year_for_the_same_purpose_as_of_this_scheme?",
+    "state",
+    "studentuniqueid",
+    "validupto"
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "$schema": "http://cord.network/draft-01/schema#"
+}

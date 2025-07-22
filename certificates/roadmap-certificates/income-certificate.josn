@@ -1,0 +1,113 @@
+{
+  "$id": "schema:cord:s31UUQEcqTG1PJhhKeBS1ydPyUg8u5HpGJsLmQcgzt1gjUWwn",
+  "title": "Income Certificate:c6ffea3f-c0b9-45a2-978b-0cd36df5b969",
+  "description": "This schema to be used to issue income certificate",
+  "properties": {
+    "studentuniqueid": {
+      "type": "string"
+    },
+    "schoolid": {
+      "type": "string"
+    },
+    "schoolname": {
+      "type": "string"
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "fathername": {
+      "type": "string"
+    },
+    "mothername": {
+      "type": "string"
+    },
+    "husbandname": {
+      "type": "string"
+    },
+    "wifename": {
+      "type": "string"
+    },
+    "addressline1": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "pin": {
+      "type": "number"
+    },
+    "state": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "castename": {
+      "type": "string"
+    },
+    "castecategory": {
+      "type": "string"
+    },
+    "annualincome": {
+      "type": "number"
+    },
+    "agricultureincome": {
+      "type": "number"
+    },
+    "salaryincome": {
+      "type": "number"
+    },
+    "businessincome": {
+      "type": "number"
+    },
+    "otherincome": {
+      "type": "number"
+    },
+    "issuedby": {
+      "type": "string"
+    },
+    "issuerauthority": {
+      "type": "string"
+    },
+    "issueddate": {
+      "type": "string"
+    },
+    "validupto": {
+      "type": "string"
+    },
+    "originalvc": {
+      "type": "object"
+    },
+    "issueraddress": {
+      "type": "string"
+    },
+    "vtc": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "addressline1",
+    "agricultureincome",
+    "annualincome",
+    "businessincome",
+    "country",
+    "district",
+    "fathername",
+    "firstname",
+    "issuedby",
+    "issueddate",
+    "issuerauthority",
+    "mothername",
+    "originalvc",
+    "pin",
+    "salaryincome",
+    "schoolid",
+    "schoolname",
+    "state",
+    "studentuniqueid",
+    "validupto"
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "$schema": "http://cord.network/draft-01/schema#"
+}

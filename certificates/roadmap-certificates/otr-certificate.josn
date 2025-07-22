@@ -1,0 +1,67 @@
+{
+  "$id": "schema:cord:s34gbpda7ed5W8g54g3sNBgpE1eGXJaLcDv3XPf2APX2ankyJ",
+  "title": "OTR Credential:00981a49-d014-4427-a739-00147172246c",
+  "description": "One time registration form",
+  "properties": {
+    "otr_number": {
+      "type": "number"
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "middlename": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "date_of_birth": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "father_name": {
+      "type": "string"
+    },
+    "mother_name": {
+      "type": "string"
+    },
+    "aadhaar": {
+      "type": "number"
+    },
+    "issuedby": {
+      "type": "string"
+    },
+    "issuerauthority": {
+      "type": "string"
+    },
+    "issued_date": {
+      "type": "string"
+    },
+    "validupto": {
+      "type": "string"
+    },
+    "original_vc": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "aadhaar",
+    "date_of_birth",
+    "father_name",
+    "firstname",
+    "gender",
+    "issued_date",
+    "issuedby",
+    "issuerauthority",
+    "lastname",
+    "mother_name",
+    "original_vc",
+    "otr_number",
+    "validupto"
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "$schema": "http://cord.network/draft-01/schema#"
+}

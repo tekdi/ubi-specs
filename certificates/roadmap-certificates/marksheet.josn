@@ -1,0 +1,111 @@
+{
+  "$id": "schema:cord:s33fTLsBqUy8MwWPiy3MPYnj73K1Kdh1kHST5AQCfjUfFadaa",
+  "title": "Marksheet:70fd28a2-c80c-4777-8665-ed0fd43e5268",
+  "description": "Schema for Marksheet",
+  "properties": {
+    "studentuniqueid": {
+      "type": "string"
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "middlename": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "schoolid": {
+      "type": "string"
+    },
+    "schoolname": {
+      "type": "string"
+    },
+    "currentclass": {
+      "type": "number"
+    },
+    "previousclass": {
+      "type": "number"
+    },
+    "examdate": {
+      "type": "string"
+    },
+    "cgpa": {
+      "type": "number"
+    },
+    "cgpamax": {
+      "type": "number"
+    },
+    "grade": {
+      "type": "string"
+    },
+    "marksmax": {
+      "type": "number"
+    },
+    "markstotal": {
+      "type": "number"
+    },
+    "percentage": {
+      "type": "number"
+    },
+    "result": {
+      "type": "string"
+    },
+    "academicyear": {
+      "type": "string"
+    },
+    "issuedby": {
+      "type": "string"
+    },
+    "issuerauthority": {
+      "type": "string"
+    },
+    "issueddate": {
+      "type": "string"
+    },
+    "validupto": {
+      "type": "string"
+    },
+    "originalvc": {
+      "type": "object"
+    },
+    "originalvc1": {
+      "type": "object"
+    },
+    "issuingauthorityaddress": {
+      "type": "string"
+    },
+    "issuingauthoritydistrict": {
+      "type": "string"
+    },
+    "issuingauthoritypin": {
+      "type": "number"
+    },
+    "issuingauthoritystate": {
+      "type": "string"
+    },
+    "issuingauthoritycountry": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "academicyear",
+    "currentclass",
+    "firstname",
+    "issuedby",
+    "issueddate",
+    "issuerauthority",
+    "lastname",
+    "originalvc",
+    "percentage",
+    "previousclass",
+    "result",
+    "schoolid",
+    "schoolname",
+    "studentuniqueid",
+    "validupto"
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "$schema": "http://cord.network/draft-01/schema#"
+}

@@ -1,0 +1,124 @@
+{
+  "$id": "schema:cord:s32NySKR8qjg9FcfXDZH5nEMKzxyXUbJ1jABXq599G3RBpt36",
+  "title": "Fee Receipt Schema:b21bf9e3-1b75-46fa-86c4-41187ecec5c4",
+  "description": "Schema for Fee Receipt",
+  "properties": {
+    "school_id": {
+      "type": "string"
+    },
+    "student_unique_id": {
+      "type": "string"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "middle_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "academic_year": {
+      "type": "string"
+    },
+    "class": {
+      "type": "number"
+    },
+    "school_name": {
+      "type": "string"
+    },
+    "locality": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "pin": {
+      "type": "number"
+    },
+    "country": {
+      "type": "string"
+    },
+    "tuition_and_admin_fee_paid": {
+      "type": "number"
+    },
+    "misc_fee_paid": {
+      "type": "number"
+    },
+    "issued_by": {
+      "type": "string"
+    },
+    "issuer_authority": {
+      "type": "string"
+    },
+    "issuance_date": {
+      "type": "string"
+    },
+    "credential_validity_date": {
+      "type": "string"
+    },
+    "originalvc": {
+      "type": "object"
+    },
+    "originalvc1": {
+      "type": "object"
+    },
+    "address_line1": {
+      "type": "string"
+    },
+    "student_status": {
+      "type": "string"
+    },
+    "address_line_2": {
+      "type": "string"
+    },
+    "landmark": {
+      "type": "string"
+    },
+    "address_of_card_issuing_authority": {
+      "type": "string"
+    },
+    "issuing_authority_district": {
+      "type": "string"
+    },
+    "issuing_authority_pin_code": {
+      "type": "number"
+    },
+    "issuing_authority_state": {
+      "type": "string"
+    },
+    "issuing_authority_country": {
+      "type": "string"
+    },
+    "school_registration_number": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "academic_year",
+    "class",
+    "country",
+    "credential_validity_date",
+    "district",
+    "first_name",
+    "issuance_date",
+    "issued_by",
+    "issuer_authority",
+    "last_name",
+    "locality",
+    "misc_fee_paid",
+    "originalvc",
+    "pin",
+    "school_id",
+    "school_name",
+    "state",
+    "student_unique_id",
+    "tuition_and_admin_fee_paid"
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "$schema": "http://cord.network/draft-01/schema#"
+}

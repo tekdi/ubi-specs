@@ -1,0 +1,108 @@
+{
+  "$id": "schema:cord:s34ZiRFqSWuWAJ3zarchFQwpuAkjWWSesrV1ABxESvxt19QZV",
+  "title": "School Enrollment Certificate:9e72d8f2-5870-4f6f-a979-ed22d4e283ca",
+  "description": "School enrollment certificate",
+  "properties": {
+    "schoolid": {
+      "type": "string"
+    },
+    "studentuniqueid": {
+      "type": "string"
+    },
+    "schoolname": {
+      "type": "string"
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "middlename": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "academicyear": {
+      "type": "string"
+    },
+    "class": {
+      "type": "string"
+    },
+    "locality": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "pin": {
+      "type": "number"
+    },
+    "state": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "studentstatus": {
+      "type": "string"
+    },
+    "issuedby": {
+      "type": "string"
+    },
+    "issuerauthority": {
+      "type": "string"
+    },
+    "issueddate": {
+      "type": "string"
+    },
+    "validupto": {
+      "type": "string"
+    },
+    "originalvc": {
+      "type": "object"
+    },
+    "issuingauthorityaddress": {
+      "type": "string"
+    },
+    "issuingauthoritydistrict": {
+      "type": "string"
+    },
+    "issuingauthoritypin": {
+      "type": "string"
+    },
+    "issuingauthoritystate": {
+      "type": "string"
+    },
+    "issuingauthoritycountry": {
+      "type": "string"
+    },
+    "authorityname": {
+      "type": "string"
+    },
+    "designationprincipal": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "academicyear",
+    "class",
+    "country",
+    "district",
+    "firstname",
+    "issuedby",
+    "issueddate",
+    "issuerauthority",
+    "lastname",
+    "locality",
+    "originalvc",
+    "pin",
+    "schoolid",
+    "schoolname",
+    "state",
+    "studentstatus",
+    "studentuniqueid",
+    "validupto"
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "$schema": "http://cord.network/draft-01/schema#"
+}
