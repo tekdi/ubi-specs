@@ -1,0 +1,146 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MarksheetCredential",
+  "description": "Schema for Verifiable Credential containing marksheet information.",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "type": ["string", "array"]
+    },
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": ["string", "array"]
+    },
+    "issuer": {
+      "type": ["string", "object"]
+    },
+    "issuanceDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "credentialSubject": {
+      "type": "object",
+      "required": [
+        "firstName",
+        "rollNumber",
+        "academicYear",
+        "programName",
+        "institutionName",
+        "issuedBy",
+        "issuingAuthority",
+        "issueDate"
+      ],
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "enrollmentNumber": {
+          "type": "string"
+        },
+        "rollNumber": {
+          "type": "string"
+        },
+        "academicYear": {
+          "type": "string"
+        },
+        "programName": {
+          "type": "string"
+        },
+        "institutionName": {
+          "type": "string"
+        },
+        "marksObtained": {
+          "type": "number"
+        },
+        "totalMarks": {
+          "type": "number"
+        },
+        "percentage": {
+          "type": "number"
+        },
+        "grade": {
+          "type": "string"
+        },
+        "issuedBy": {
+          "type": "string"
+        },
+        "issueDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "issuingAuthority": {
+          "type": "string"
+        },
+        "issuingAuthorityAddress": {
+          "type": "string"
+        },
+        "issuingAuthorityDistrict": {
+          "type": "string"
+        },
+        "issuingAuthorityState": {
+          "type": "string"
+        },
+        "issuingAuthorityPin": {
+          "type": "number"
+        },
+        "subjects": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "marksTheory": {
+                "type": "number"
+              },
+              "marksMaxTheory": {
+                "type": "number"
+              },
+              "marksPractical": {
+                "type": "number"
+              },
+              "marksMaxPractical": {
+                "type": "number"
+              },
+              "marksOther": {
+                "type": "number"
+              },
+              "marksMaxOther": {
+                "type": "number"
+              },
+              "marksTotal": {
+                "type": "number"
+              },
+              "marksMax": {
+                "type": "number"
+              },
+              "gp": {
+                "type": "number"
+              },
+              "gpMax": {
+                "type": "number"
+              },
+              "grade": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": ["@context", "type", "issuer", "issuanceDate", "credentialSubject"]
+}

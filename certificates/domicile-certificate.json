@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DomicileCertificateCredential",
+  "description": "Schema for Verifiable Credential containing domicile certificate information.",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "type": ["string", "array"]
+    },
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": ["string", "array"]
+    },
+    "issuer": {
+      "type": ["string", "object"]
+    },
+    "issuanceDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "credentialSubject": {
+      "type": "object",
+      "required": [
+        "firstName",
+        "domicileState",
+        "issuingAuthority",
+        "issueDate",
+        "issuedBy"
+      ],
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "dateOfBirth": {
+          "type": "string",
+          "format": "date"
+        },
+        "placeOfBirth": {
+          "type": "object",
+          "properties": {
+            "addressLine1": { "type": "string" },
+            "addressLine2": { "type": "string" },
+            "district": { "type": "string" },
+            "state": { "type": "string" },
+            "pin": { "type": "string" }
+          }
+        },
+        "domicileState": {
+          "type": "string"
+        },
+        "issuedBy": {
+          "type": "string"
+        },
+        "issueDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "issuingAuthority": {
+          "type": "string"
+        },
+        "issuingAuthorityAddress": {
+          "type": "string"
+        },
+        "issuingAuthorityDistrict": {
+          "type": "string"
+        },
+        "issuingAuthorityState": {
+          "type": "string"
+        },
+        "issuingAuthorityPin": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": ["@context", "type", "issuer", "issuanceDate", "credentialSubject"]
+}

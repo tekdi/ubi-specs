@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/income-certificate-vc-schema.json",
+  "title": "Income Certificate Verifiable Credential",
+  "type": "object",
+  "required": ["@context", "type", "issuer", "issuanceDate", "credentialSubject"],
+  "properties": {
+    "@context": {
+      "type": ["string", "array"]
+    },
+    "type": {
+      "type": ["string", "array"]
+    },
+    "issuer": {
+      "type": ["string", "object"]
+    },
+    "issuanceDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expirationDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "credentialSubject": {
+      "type": "object",
+      "required": [
+        "firstName", "fatherName", "motherName", "addressLine1",
+        "annualIncome", "issuedBy", "issuingAuthority", "issueDate", "validUpto"
+      ],
+      "properties": {
+        "firstName": { "type": "string" },
+        "middleName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "fatherName": { "type": "string" },
+        "motherName": { "type": "string" },
+        "husbandName": { "type": "string" },
+        "wifeName": { "type": "string" },
+        "addressLine1": { "type": "string" },
+        "addressLine2": { "type": "string" },
+        "district": { "type": "string" },
+        "state": { "type": "string" },
+        "pin": { "type": "number" },
+        "casteName": { "type": "string" },
+        "casteCategory": { "type": "string" },
+        "annualIncome": { "type": "number" },
+        "agricultureIncome": { "type": "number" },
+        "salaryIncome": { "type": "number" },
+        "businessIncome": { "type": "number" },
+        "otherIncome": { "type": "number" },
+        "organizationName": { "type": "string" },
+        "orgOfficerRank": { "type": "string" },
+        "organizationAddress": {
+          "type": "object",
+          "properties": {
+            "addressLine1": { "type": "string" },
+            "addressLine2": { "type": "string" },
+            "district": { "type": "string" },
+            "state": { "type": "string" },
+            "pin": { "type": "string" }
+          }
+        },
+        "issuedBy": { "type": "string" },
+        "issuingAuthority": {
+          "type": "string"
+        },
+        "issuingAuthorityAddress": {
+          "type": "string"
+        },
+        "issuingAuthorityDistrict": {
+          "type": "string"
+        },
+        "issuingAuthorityState": {
+          "type": "string"
+        },
+        "issuingAuthorityPin": {
+          "type": "string"
+        },
+        "issueDate": { "type": "string", "format": "date" }
+      }
+    }
+  }
+}

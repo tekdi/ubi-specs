@@ -1,0 +1,104 @@
+{
+  "$id": "schema:cord:s32q3Zb5tpqKAbRctTsTYknq4R541V2wUftzUeF1V7Rs7nmg9",
+  "title": "UDID Certificate:23db262b-99f9-4343-9850-b2e82b8a3e6a",
+  "description": "UDID Certificate schema",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "aadhaar_number": {
+      "type": "number"
+    },
+    "unique_disability_id_(udid)": {
+      "type": "string"
+    },
+    "disability_type": {
+      "type": "string"
+    },
+    "birthyear": {
+      "type": "number"
+    },
+    "percentage_of_disability": {
+      "type": "number"
+    },
+    "validitycertificate": {
+      "type": "string"
+    },
+    "issuedby": {
+      "type": "string"
+    },
+    "issuerauthority": {
+      "type": "string"
+    },
+    "issueddate": {
+      "type": "string"
+    },
+    "recordvalidupto": {
+      "type": "string"
+    },
+    "originalvc": {
+      "type": "object"
+    },
+    "originalvc1": {
+      "type": "object"
+    },
+    "studentuniqueid": {
+      "type": "string"
+    },
+    "issuingauthorityaddress": {
+      "type": "string"
+    },
+    "issuingauthoritydistrict": {
+      "type": "string"
+    },
+    "issuingauthoritypin": {
+      "type": "string"
+    },
+    "issuingauthoritystate": {
+      "type": "string"
+    },
+    "issuingauthoritycountry": {
+      "type": "string"
+    },
+    "certificate_validaity_date": {
+      "type": "string"
+    },
+    "issuingauthoritysignature": {
+      "type": "object"
+    },
+    "disabiltycategorysymbol": {
+      "type": "object"
+    },
+    "stateid": {
+      "type": "string"
+    },
+    "photograph": {
+      "type": "object"
+    },
+    "issuedlanguage": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "aadhaar_number",
+    "birthyear",
+    "disability_type",
+    "gender",
+    "issuedby",
+    "issueddate",
+    "issuerauthority",
+    "name",
+    "originalvc",
+    "originalvc1",
+    "percentage_of_disability",
+    "recordvalidupto",
+    "unique_disability_id_(udid)",
+    "validitycertificate"
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "$schema": "http://cord.network/draft-01/schema#"
+}

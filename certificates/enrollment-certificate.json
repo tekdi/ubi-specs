@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "StudentEnrolmentCredential",
+  "description": "Schema for Verifiable Credential containing student enrollment information.",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "type": ["string", "array"]
+    },
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": ["string", "array"]
+    },
+    "issuer": {
+      "type": ["string", "object"]
+    },
+    "issuanceDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "credentialSubject": {
+      "type": "object",
+      "required": [
+        "studentUniqueId",
+        "firstName",
+        "academicYear",
+        "class",
+        "schoolName",
+        "schoolId",
+        "schoolAddress",
+        "designationPrincipal",
+        "issuedBy",
+        "issuingAuthority",
+        "issueDate"
+      ],
+      "properties": {
+        "studentUniqueId": { "type": "string" },
+        "firstName": { "type": "string" },
+        "middleName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "academicYear": { "type": "string" },
+        "class": { "type": "string" },
+        "schoolName": { "type": "string" },
+        "schoolId": { "type": "string" },
+        "schoolAddress": {
+          "type": "object",
+          "properties": {
+            "addressLine1": { "type": "string" },
+            "addressLine2": { "type": "string" },
+            "district": { "type": "string" },
+            "state": { "type": "string" },
+            "pin": { "type": "string" }
+          }
+        },
+        "designationPrincipal": { "type": "string" },
+        "issuedBy": { "type": "string" },
+        "issueDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "issuingAuthority": {
+          "type": "string"
+        },
+        "issuingAuthorityAddress": {
+          "type": "string"
+        },
+        "issuingAuthorityDistrict": {
+          "type": "string"
+        },
+        "issuingAuthorityState": {
+          "type": "string"
+        },
+        "issuingAuthorityPin": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": ["@context", "type", "issuer", "issuanceDate", "credentialSubject"]
+}

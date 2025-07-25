@@ -1,0 +1,60 @@
+{
+  "$id": "schema:cord:s32P1LCzrkFPMcnRYS6wT3uspdxoxE7Aqir9tQZJMHczauzR3",
+  "title": "Birth Certificate:b078a8e4-e3b1-4f95-b72f-fe60ce8d8970",
+  "description": "Birth Certificate",
+  "properties": {
+    "first_name": {
+      "type": "string"
+    },
+    "middle_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "place_of_birth": {
+      "type": "string"
+    },
+    "address_line_1": {
+      "type": "string"
+    },
+    "town": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "original_file_vc": {
+      "type": "object"
+    },
+    "issuance_date": {
+      "type": "string"
+    },
+    "issued_by": {
+      "type": "string"
+    },
+    "issuer_authority": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "address_line_1",
+    "first_name",
+    "gender",
+    "issuance_date",
+    "issued_by",
+    "issuer_authority",
+    "last_name",
+    "middle_name",
+    "original_file_vc",
+    "place_of_birth",
+    "state",
+    "town"
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "$schema": "http://cord.network/draft-01/schema#"
+}

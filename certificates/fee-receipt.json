@@ -1,0 +1,95 @@
+{
+  "$id": "schema:cord:s32NySKR8qjg9FcfXDZH5nEMKzxyXUbJ1jABXq599G3RBpt36",
+  "title": "Fee Receipt Schema:b21bf9e3-1b75-46fa-86c4-41187ecec5c4",
+  "description": "Schema for Fee Receipt",
+  "properties": {
+    "firstName": {
+      "type": "string"
+    },
+    "middleName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "academic_year": {
+      "type": "string"
+    },
+    "class": {
+      "type": "number"
+    },
+    "school_name": {
+      "type": "string"
+    },
+    "school_id": {
+      "type": "string"
+    },
+    "school_registration_number": {
+      "type": "string"
+    },
+    "student_unique_id": {
+      "type": "string"
+    },
+    "addressLine1": {
+      "type": "string"
+    },
+    "addressLine2": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "pin": {
+      "type": "number"
+    },
+    "tuition_and_admin_fee_paid": {
+      "type": "number"
+    },
+    "misc_fee_paid": {
+      "type": "number"
+    },
+    "total_fee_paid": {
+      "type": "number"
+    },
+    "issuedBy": {
+      "type": "string"
+    },
+    "issueDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "issuingAuthority": {
+      "type": "string"
+    },
+    "issuingAuthorityAddress": {
+      "type": "string"
+    },
+    "issuingAuthorityDistrict": {
+      "type": "string"
+    },
+    "issuingAuthorityState": {
+      "type": "string"
+    },
+    "issuingAuthorityPin": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "academic_year",
+    "class",
+    "firstName",
+    "issueDate",
+    "issuedBy",
+    "issuingAuthority",
+    "school_registration_number",
+    "school_name",
+    "student_unique_id",
+    "total_fee_paid"
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "$schema": "http://cord.network/draft-01/schema#"
+}

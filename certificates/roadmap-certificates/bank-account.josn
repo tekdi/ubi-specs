@@ -1,0 +1,74 @@
+{
+  "$id": "schema:cord:s369Bonmhy4TVR2qdeH3167kLku3kkr3ssvN8v6Goo6tKpyHP",
+  "title": "Bank Account:0f6e07d3-71ab-4985-a814-636f2cff6d5b",
+  "description": "Bank account schema ",
+  "properties": {
+    "accountholdername": {
+      "type": "string"
+    },
+    "accountnumber": {
+      "type": "string"
+    },
+    "ifsccode": {
+      "type": "string"
+    },
+    "bankname": {
+      "type": "string"
+    },
+    "bankaddress": {
+      "type": "string"
+    },
+    "branchcode": {
+      "type": "string"
+    },
+    "issuedby": {
+      "type": "string"
+    },
+    "issuerauthority": {
+      "type": "string"
+    },
+    "issueddate": {
+      "type": "string"
+    },
+    "validupto": {
+      "type": "string"
+    },
+    "originalvc": {
+      "type": "object"
+    },
+    "originalvc1": {
+      "type": "object"
+    },
+    "issuingauthorityaddress": {
+      "type": "string"
+    },
+    "issuingauthoritydistrict": {
+      "type": "string"
+    },
+    "issuingauthoritypin": {
+      "type": "string"
+    },
+    "issuingauthoritystate": {
+      "type": "string"
+    },
+    "issuingauthoritycountry": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "accountholdername",
+    "accountnumber",
+    "bankaddress",
+    "bankname",
+    "branchcode",
+    "ifsccode",
+    "issuedby",
+    "issueddate",
+    "issuerauthority",
+    "originalvc",
+    "validupto"
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "$schema": "http://cord.network/draft-01/schema#"
+}
